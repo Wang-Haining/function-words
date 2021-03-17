@@ -5,6 +5,11 @@ description = "Better curated Chinese and English function words."
 authors = ["Haining Wang"]
 license = "MIT License"
 
+packages = [
+    { include = "src" },
+    { include = "src/**/*.py" },
+]
+
 [tool.poetry.dependencies]
 python = "^3.8"
 

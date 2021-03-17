@@ -1,4 +1,4 @@
-# function-words
+# functionwords
 
 
 Better curated function words.

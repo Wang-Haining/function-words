@@ -28,7 +28,7 @@ class FunctionWords(object):
                 f"""Pass in desired function word list in {NAMES}."""
             )
         self.function_words = json.load(open('./functionwords/resources/' + name.lower() + '.json', 'r'))
-        self.description = None
+        self.description = json.load(open('./functionwords/resources/description.json', 'r'))[name]
 
     def remove_function_words(self, raw):
         """

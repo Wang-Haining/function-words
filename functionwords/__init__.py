@@ -1,2 +1,1 @@
-#!/usr/bin/env python
-
+from functionwords.base import FunctionWords

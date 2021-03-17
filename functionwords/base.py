@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-@author: whn395436129@gmail.com
+@author: Haining Wang {whn395436129@gmail.com}
 Created on March 17, 2021.
 """
 

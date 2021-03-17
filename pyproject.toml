@@ -3,12 +3,9 @@ name = "functionwords"
 version = "0.0.2"
 description = "Better curated Chinese and English function words."
 authors = ["Haining Wang <hw56@indiana.edu>"]
-license = "MIT License"
-
-packages = [
-    { include = "src" },
-    { include = "src/**/*.py" },
-]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/Wang-Haining/functionwords"
 
 [tool.poetry.dependencies]
 python = "^3.8"

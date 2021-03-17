@@ -20,14 +20,14 @@ class FunctionWords(object):
     """
 
     def __init__(self, name):
-        NAMES = json.load(open('./src/resources/names.json', 'r'))
+        NAMES = json.load(open('./functionwords/resources/names.json', 'r'))
         if name.lower() in NAMES:
             self.name = name
         else:
             raise ValueError(
                 f"""Pass in desired function word list in {NAMES}."""
             )
-        self.function_words = json.load(open('./src/resources/' + name.lower() + '.json', 'r'))
+        self.function_words = json.load(open('./functionwords/resources/' + name.lower() + '.json', 'r'))
         self.description = None
 
     def remove_function_words(self, raw):

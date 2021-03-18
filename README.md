@@ -63,6 +63,11 @@ Only python 3.8+ is required.
 
 This package is licensed under the MIT License.
 
+## TO do
+
+- write some tests
+- add more function word list
+
 ## References
 [1]: Ziqiang, W. (1998). Modern Chinese Dictionary of Function Words. Shanghai Dictionary Press.
 

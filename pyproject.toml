@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "functionwords"
-version = "0.0.16"
+version = "0.2.0"
 description = "Better curated Chinese and English function words."
 authors = ["Haining Wang <hw56@indiana.edu>"]
 readme = "README.md"

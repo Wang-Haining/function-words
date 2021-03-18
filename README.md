@@ -1,8 +1,10 @@
 # functionwords
 
 
-The functionwords package aims at provides better curated function words.
-For now, it supports four kinds of function words: modern Chinese ([`chinese_simplified_modern`][1]), classical Chinese (in simplified Chinese character, [`chinese_classical_naive`][2] and [`chinese_classical_comprehensive`][3]), and moder English ([`english`][4]).
+The functionwords package aims at providing **better curated** function words.
+
+
+For now, it supports four kinds of function words: modern Chinese ([`chinese_simplified_modern`][1]), classical Chinese (in simplified Chinese character, [`chinese_classical_naive`][2] and [`chinese_classical_comprehensive`][3]), and modern English ([`english`][4]).
 
 The `FunctionWords` class does the heavy lifting. Initiate it with the desired function word list `name`. The instance has three methods (.`remove_function_words()`, `count_function_words()`, and `get_function_words()`) and three attributes (`name`, `function_words`, and `description`).
 
@@ -46,13 +48,11 @@ fw.count_function_words(raw)
 # returns a list
 fw.get_function_words(raw)
 
-
-
 ```
 
 ## Requirements
 
-Python 3.8+ is required.
+Only python 3.8+ is required.
 
 ## Important links
 

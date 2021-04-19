@@ -1,5 +1,5 @@
 # functionwords
-
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 The functionwords package aims at providing **curated** function words.
 
@@ -61,9 +61,9 @@ Only python 3.8+ is required.
 - Source code: https://github.com/Wang-Haining/functionwords
 - Issue tracker: https://github.com/Wang-Haining/functionwords/issues
 
-## License
+## Licence
 
-This package is licensed under CC-BY-SA 4.0.
+This package is licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
 ## To do
 

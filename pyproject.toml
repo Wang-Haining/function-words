@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "functionwords"
-version = "0.4.1"
+version = "0.4.2"
 description = "Curated Chinese and English function words."
 authors = ["Haining Wang <hw56@indiana.edu>"]
 readme = "README.md"
-license = "MIT"
+license = "CC-BY-SA 4.0"
 repository = "https://github.com/Wang-Haining/functionwords"
 
 [tool.poetry.dependencies]

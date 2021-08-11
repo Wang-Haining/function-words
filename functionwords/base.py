@@ -7,6 +7,7 @@ import re
 import os
 import json
 
+NAMES = ["chinese_classical_comprehensive", "chinese_classical_naive", "chinese_simplified_modern", "english"]
 
 class FunctionWords(object):
     """
@@ -21,9 +22,6 @@ class FunctionWords(object):
 
     def __init__(self, name):
         self.__path__ = os.path.dirname(__file__)
-        NAMES = json.load(
-            open(os.path.join(self.__path__, "resources", "names.json"), "r")
-        )
         if name.lower() in NAMES:
             self.name = name.lower()
         else:

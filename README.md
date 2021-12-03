@@ -2,7 +2,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](
 https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-The functionwords package aims at providing **curated** Chinese and English function words.
+The `functionwords` package aims at providing **curated** Chinese and English function words.
 
 For now, it supports four function word lists: modern Chinese ([`chinese_simplified_modern`][1]), classical Chinese
 ([`chinese_classical_naive`][2] and [`chinese_classical_comprehensive`][3]),
@@ -10,7 +10,7 @@ and modern English ([`english`][4]). Chinese function words are only available i
 
 The `FunctionWords` class does the heavy lifting.
 Initiate it with the desired function word list `name`.
-The instance has three methods (.`remove_function_words()`, `count_function_words()`, and `get_function_words()`) and
+The instance has two methods `transform()` and `get_feature_names()`) and
 three attributes (`name`, `function_words`, and `description`).
 
 |Name      |# of function words| &nbsp; &nbsp; &nbsp; &nbsp;Description &nbsp; &nbsp; &nbsp; &nbsp;|
@@ -41,16 +41,13 @@ raw = "The present King of Singapore is bald."
 # 'chinese_classical_naive', 'chinese_simplified_modern', or 'english'
 fw = FunctionWords(name='english')
 
-# to remove function words
-fw.remove_function_words(raw)
-
 # to count function words accordingly
-# returns a dict
-fw.count_function_words(raw)
+# returns a list of counts
+fw.transform(raw)
 
-# to list all function words in 
+# to list all function words given `name`
 # returns a list
-fw.get_function_words(raw)
+fw.get_feature_names(raw)
 
 ```
 

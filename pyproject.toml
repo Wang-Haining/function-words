@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "functionwords"
-version = "0.4.4"
-description = "Curated Chinese and English function words."
+version = "0.6"
+description = "Extract curated Chinese and English function words from texts."
 authors = ["Haining Wang <hw56@indiana.edu>"]
 readme = "README.md"
 license = "CC-BY-SA 4.0"

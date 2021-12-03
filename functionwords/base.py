@@ -1,6 +1,7 @@
 """
-@author: Haining Wang {whn395436129@gmail.com}
+@author: Haining Wang
 Created on March 17, 2021.
+Modified on Nov. 19, 2021.
 """
 
 import re
@@ -8,6 +9,7 @@ import os
 import json
 
 NAMES = ["chinese_classical_comprehensive", "chinese_classical_naive", "chinese_simplified_modern", "english"]
+
 
 class FunctionWords(object):
     """
@@ -33,45 +35,36 @@ class FunctionWords(object):
             open(os.path.join(self.__path__, "resources", "description.json"), "r")
         )[self.name]
 
-    def remove_function_words(self, raw):
-        """
-        Removes all function words in a text.
-        param:
-            raw: A string.
-        return:
-            A string without function words.
-        """
-        if not isinstance(raw, str):
-            raise ValueError(
-                f"""List of raw text documents expected, {type(raw)} object received."""
-            )
-        remove = "|".join(self.function_words)
-        pattern = re.compile(r"\b(" + remove + r")\b", flags=re.IGNORECASE)
-
-        return re.sub(pattern=pattern, string=raw, repl="")
-
-    def get_function_words(self):
+    def get_feature_names(self):
         """
         Returns a list of desired function words.
         """
 
         return self.function_words
 
-    def count_function_words(self, raw):
+    def transform(self, raw):
         """
-        Counts function words in the `raw`.
+        Counts function words in `raw`.
         param:
             raw: A string.
         return:
-            A dict keyed by a function word, valued the corresponding count.
+            A list of count of function words.
         """
         if not isinstance(raw, str):
             raise ValueError(
                 f"""List of raw text documents expected, {type(raw)} object received."""
             )
-        counts_ = [
-            len(re.findall(r"\b" + function_word + r"\b", raw.lower()))
-            for function_word in self.function_words
-        ]
+        if self.name == 'english':
+            counts = [len(re.findall(r"\b" + function_word + r"\b", raw.lower())) for function_word in self.function_words]
+        else:
+            counts = [len(re.findall(function_word, raw)) for function_word in self.function_words]
 
-        return dict(zip(self.function_words, counts_))
+        return counts
+
+    def fit_transform(self, raw):
+
+        return self.transform(raw)
+
+    def fit(self, raw):
+
+        return self.transform(raw)
